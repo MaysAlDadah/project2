@@ -14,8 +14,8 @@
                                     <div>
                                         <a href="{{ route('admin.articles.show', $article) }}">
                                             @if($article->image)
-                                                <img src="{{ asset('uploads/' . $article->image) }}" width="100"
-                                                     height="100" class="img-fluid">
+                                                <img src="{{ asset('storage/uploads/' . $article->image) }}" width="100" height="100" class="img-fluid">
+
                                             @else
                                                 <img src="{{ asset('no_image.jpg') }}" width="100" height="100"
                                                      class="img-fluid">
@@ -30,7 +30,7 @@
                                     <a href="{{ route('admin.articles.show', $article) }}" class="font-weight-bold text-success">
                                         <h3>{{ $article->title }}</h3>
                                     </a>
-                                    <p class="text-muted">{{ $article->article }}</p>
+                                    <p class="text-muted">{{ Str::limit($article->article, 100) }}</p>
                                 </div>
                             @endforeach
                         </div>

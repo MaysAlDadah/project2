@@ -16,7 +16,6 @@ class ArticleController extends Controller
     public function index()
     {
         $articles = Article::with('category')->paginate(10);
-
         return view('admin.articles.index', compact('articles'));
     }
 
@@ -30,7 +29,6 @@ class ArticleController extends Controller
     public function show($id)
     {
         // Fetch the article with the given $id and return the article view
-
         $article = Article::with('category', 'tags')->find($id);
         return view('admin.articles.show', compact('article'));
     }
@@ -84,7 +82,7 @@ class ArticleController extends Controller
         $article->update([
             'title' => $request->title,
             'image' => $filename ?? $article->image,
-            'post' => $request->article,
+            'article' => $request->article,
             'category_id' => $request->category
         ]);
 

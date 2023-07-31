@@ -9,6 +9,7 @@
                     <div class="card-body">
                         Something special about me here.
                     </div>
+                    <p class="card-body">Hello, This is Mays, a third-year student at the Faculty of Engineering and Information Technology , Al-Azhar University - Gaza and & aspiring web developer.</p>
                 </div>
             </div>
         </div>

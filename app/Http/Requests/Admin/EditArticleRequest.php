@@ -26,7 +26,7 @@ class EditArticleRequest extends FormRequest
         return [
             'title'     => 'required|max:200',
             'image'     => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'post'      => 'required',
+            'article'      => 'required',
             'category'  => 'required|integer|exists:categories,id',
             'tags'      => 'required'
         ];
